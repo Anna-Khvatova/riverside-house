@@ -690,6 +690,11 @@ img {
   align-items: center;
   gap: 20px;
 }
+@media screen and (max-width: 980px) {
+  .about__item {
+    max-width: calc(50% - 20px);
+  }
+}
 .about__img {
   padding: 10px;
   display: flex;
@@ -697,6 +702,7 @@ img {
   justify-content: center;
   border: 1px solid #2d2c2e;
   position: relative;
+  flex: none;
 }
 .about__img img {
   width: 50px;
@@ -837,6 +843,10 @@ img {
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.3s;
+}
+.gallery__img:hover img {
+  transform: scale(1.1);
 }
 
 /* reviews start -->> */
@@ -898,6 +908,13 @@ img {
   height: 600px;
   position: relative;
 }
+@media (max-width: 980px) {
+  .contacts {
+    height: initial;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .contacts .section-title {
   margin-bottom: 20px;
 }
@@ -925,17 +942,14 @@ img {
     right: 25px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 980px) {
   .contacts__content {
-    top: 40px;
-    right: 25px;
-    padding: 35px 25px;
-  }
-}
-@media (max-width: 480px) {
-  .contacts__content {
-    max-width: calc(100% - 40px);
-    left: 20px;
+    position: relative;
+    right: initial;
+    top: initial;
+    max-width: 100%;
+    box-shadow: initial;
+    border: initial;
   }
 }
 .contacts__content .section-title {

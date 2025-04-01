@@ -44,7 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
         navigation: {
             nextEl: ".reviews__next",
             prevEl: ".reviews__prev",
-        },
+        },breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          980: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+         },
     });
 
     var gallerySlider = new Swiper(".gallery__slider", {
@@ -57,6 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
             
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+          },
+          900: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1500: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+         },
     });
     var ourWorkImgSlider1 = new Swiper(".our-work-img__slider1", {
       slidesPerView: 1,
@@ -187,4 +214,9 @@ document.addEventListener('DOMContentLoaded', () => {
     $(".menu__link").on('click', function () {
 		$('body').removeClass('menu-open')
     });
+
+    $("a[rel='m_PageScroll2id']").mPageScroll2id({
+      offset: 1,
+      keepHighlightUntilNext: true
+  });
 });
