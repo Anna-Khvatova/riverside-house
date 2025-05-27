@@ -1216,7 +1216,7 @@ img {
   }
 }
 .gallery__img {
-  height: 300px;
+  height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
